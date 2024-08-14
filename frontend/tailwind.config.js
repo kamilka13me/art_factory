@@ -42,49 +42,10 @@ export default {
       colors: {
         'white-transparent-70': 'rgba(255, 255, 255, 0.7)',
         'main-dark': '#151515',
+        'main-white': '#FFFFFF',
         'secondary-dark': '#B6B6B6',
         'selected-dark': '#1D1D1D',
-        'shadow-footer': '#171717',
-        'main-white': '#FFFFFF',
-        'dark-grey': '#262525',
-        grey: '#8D8D8D',
-        'light-grey': '#A8A8A8',
-        disabled: '#C6C6C6',
-        main: '#D9C01B',
-        'secondary-yellow': '#FFDE00',
-        'selected-yellow': '#F4F2EC',
-        blue: '#0F62FE',
-        peach: '#FD8080',
-        orange: '#D75810',
-        'error-red': '#F40A0A',
-        green: '#32C42F',
-        purple: '#8A3FFC',
-      },
-      keyframes: {
-        openModalMessage: {
-          '0%': {
-            opacity: '0',
-            transform: 'translateY(20px)',
-          },
-          '100%': {
-            opacity: '1',
-            transform: 'translateY(0)',
-          },
-        },
-        openForms: {
-          '0%': {
-            opacity: '0',
-            transform: 'translate(-50%, -50%) scale(.5)',
-          },
-          '100%': {
-            opacity: '1',
-            transform: 'translate(-50%, -50%) scale(1)',
-          },
-        },
-      },
-      animation: {
-        'open-info-modal': 'openModalMessage 0.3s ease-in-out',
-        'open-forms-modal': 'openForms 0.3s ease-in-out',
+        'gray-light': '#E8E8E8',
       },
     },
   },

@@ -14,14 +14,25 @@ export type TextColors =
   | 'white'
   | 'dark';
 
-export type FontSize = 'xxs' | 'xs' | 'sm' | 'md' | 'lg' | 'xl' | '2xl' | '3xl' | '4xl';
+export type FontSize =
+  | 'xxs'
+  | 'xs'
+  | 'sm'
+  | 'md'
+  | 'lg'
+  | 'xl'
+  | '2xl'
+  | '3xl'
+  | '4xl'
+  | '5xl'
+  | '6xl';
 
 export type TextFonts = 'sans' | 'serif';
 
 const TextColor: Record<TextColors, string> = {
   primary: 'text-main-dark',
   gray: 'text-grey',
-  'gray-light': 'text-disabled',
+  'gray-light': 'text-gray-light',
   orange: 'text-orange',
   red: 'text-error-red',
   green: 'text-green',
@@ -50,6 +61,8 @@ const fontSize: Record<FontSize, string> = {
   '2xl': 'text-2xl',
   '3xl': 'text-3xl font-semibold',
   '4xl': 'text-4xl font-ibm-plex-serif',
+  '5xl': 'text-5xl font-ibm-plex-serif',
+  '6xl': 'text-6xl font-ibm-plex-serif',
 };
 
 interface Props {
