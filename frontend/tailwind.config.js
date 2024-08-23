@@ -31,7 +31,7 @@ export default {
         xs: ['12px', '16.8px'],
         sm: ['14px', '17.6px'],
         md: ['16px', '22.4px'],
-        lg: ['18px', '40px'],
+        lg: ['18px', 'auto'],
         xl: ['20px', 'auto'],
         '2xl': ['24px', '24px'],
         '3xl': ['32px', '24px'],

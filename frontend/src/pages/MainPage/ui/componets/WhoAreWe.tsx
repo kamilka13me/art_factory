@@ -1,4 +1,4 @@
-import { HStack, VStack } from '@/shared/ui/Stack';
+import { HStack } from '@/shared/ui/Stack';
 import { Text } from '@/shared/ui/Text';
 
 const WhoAreWe = () => {

@@ -1,9 +1,9 @@
-import { Icon } from '@/shared/ui/Icon';
-import { VStack, HStack } from '@/shared/ui/Stack';
-import { Text } from '@/shared/ui/Text';
-import YellowSphere from '@/shared/assets/icons/yellow-spheres.svg?react';
 import OrangeArch from '@/shared/assets/icons/orange-arch.svg?react';
 import PurpleElipse from '@/shared/assets/icons/purple-elipse.svg?react';
+import YellowSphere from '@/shared/assets/icons/yellow-spheres.svg?react';
+import { Icon } from '@/shared/ui/Icon';
+import { VStack } from '@/shared/ui/Stack';
+import { Text } from '@/shared/ui/Text';
 
 const Hero = () => {
   return (
@@ -11,11 +11,11 @@ const Hero = () => {
       <div className="bg-white h-[600px] w-full rounded-[30px] flex justify-center items-center flex-col px-5 ">
         <div className="mb-4 max-w-[893px]">
           <div className="inline-flex w-auto items-baseline">
-            <Icon Svg={YellowSphere} width={89} height={'auto'} />
+            <Icon Svg={YellowSphere} width={89} height="auto" />
             <span className="text-7xl font-ibm-plex-serif">Незалежній</span>
           </div>
           <div className="inline-flex w-auto items-baseline">
-            <Icon Svg={OrangeArch} width={97} height={'auto'} />
+            <Icon Svg={OrangeArch} width={97} height="auto" />
             <span className="text-[70px]  font-ibm-plex-serif">країні -</span>
           </div>
           <div className="flex w-auto gap-4 text-7xl items-end flex-wrap">

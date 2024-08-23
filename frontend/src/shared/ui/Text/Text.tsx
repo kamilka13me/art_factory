@@ -12,6 +12,7 @@ export type TextColors =
   | 'red'
   | 'green'
   | 'white'
+  | '[#474747]'
   | 'dark';
 
 export type FontSize =
@@ -38,6 +39,7 @@ const TextColor: Record<TextColors, string> = {
   green: 'text-green',
   white: 'text-main-white',
   dark: 'text-main-dark',
+  '[#474747]': '[#474747]',
 };
 
 const TextAlignClass: Record<TextAlign, string> = {
@@ -47,8 +49,8 @@ const TextAlignClass: Record<TextAlign, string> = {
 };
 
 const TextFont: Record<TextFonts, string> = {
-  sans: 'ibm-plex-sans',
-  serif: 'ibm-plex-serif',
+  sans: 'font-ibm-plex-sans',
+  serif: 'font-ibm-plex-serif',
 };
 
 const fontSize: Record<FontSize, string> = {
@@ -84,18 +86,18 @@ const Text: FC<Props> = (props) => {
     align = 'left',
     bold,
     className,
-    color = 'primary',
+    color,
     font = 'sans',
   } = props;
 
   const textAlign = TextAlignClass[align];
   const textSize = fontSize[size];
-  const textColor = TextColor[color];
+  const textColor = color ? TextColor[color] : '';
   const textFont = TextFont[font];
 
   return (
     <Tag
-      className={` ${bold ? 'font-bold' : ''}  ${textFont}  ${textSize} ${textAlign} ${textColor} ${className}`}
+      className={` ${bold ? 'font-bold' : ''}  ${textFont}   ${textSize} ${textAlign} ${textColor} ${className}`}
     >
       {text}
     </Tag>

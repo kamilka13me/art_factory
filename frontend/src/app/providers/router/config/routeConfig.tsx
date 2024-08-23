@@ -1,8 +1,9 @@
 import { RouteProps } from 'react-router-dom';
 
-import { AppRoutes, getRouteMain, getRouteLogin } from '@/shared/const/routes';
-import { MainPage } from '@/pages/MainPage';
 import { LoginPage } from '@/pages/LoginPage';
+import { MainPage } from '@/pages/MainPage';
+import { AppRoutes, getRouteMain, getRouteLogin } from '@/shared/const/routes';
+
 export type AppRoutesProps = RouteProps & {
   path: string;
   authOnly?: boolean;

@@ -1,12 +1,12 @@
-import { Icon } from '@/shared/ui/Icon';
-import { HStack, VStack } from '@/shared/ui/Stack';
-import { Text } from '@/shared/ui/Text';
-import Skellar from '@/shared/assets/icons/skellar.svg?react';
 import Epam from '@/shared/assets/icons/epam.svg?react';
-import Projector from '@/shared/assets/icons/projector.svg?react';
-import Okko from '@/shared/assets/icons/okko.svg?react';
 import JaGalereya from '@/shared/assets/icons/jaGalereya.svg?react';
 import Numu from '@/shared/assets/icons/namu.svg?react';
+import Okko from '@/shared/assets/icons/okko.svg?react';
+import Projector from '@/shared/assets/icons/projector.svg?react';
+import Skellar from '@/shared/assets/icons/skellar.svg?react';
+import { Icon } from '@/shared/ui/Icon';
+import { VStack } from '@/shared/ui/Stack';
+import { Text } from '@/shared/ui/Text';
 
 const Donors = () => {
   return (

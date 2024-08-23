@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
+
 import Matter from 'matter-js';
 
 const FallingBricks: React.FC = () => {
@@ -217,7 +218,7 @@ const FallingBricks: React.FC = () => {
     // engine.gravity.y = 0; // Adjust this value to control the speed of falling
     const render = Matter.Render.create({
       element: scene.current!,
-      engine: engine,
+      engine,
       options: {
         width: 1350,
         height: 400,
@@ -252,7 +253,8 @@ const FallingBricks: React.FC = () => {
     ];
 
     const bricks = bricksData.map(
-      ({ x, y, width, height, color, radius, angle }, index) => {
+      // ({ x, y, width, height, color, radius, angle }, index) => {
+      ({ x, y, width, height, radius, angle }, index) => {
         const brick = Matter.Bodies.rectangle(x, y, width, height, {
           angle,
           mass: 20,
@@ -264,12 +266,13 @@ const FallingBricks: React.FC = () => {
             strokeStyle: 'transparent',
             lineWidth: 2,
           },
-          chamfer: { radius: radius },
+          chamfer: { radius },
         });
 
         Matter.Events.on(engine, 'afterUpdate', () => {
           const { x, y } = brick.position;
           const ref = bricksRefs.current[index];
+
           if (ref) {
             ref.style.transform = `translate(${x - width / 2}px, ${y - height / 2}px) rotate(${brick.angle}rad)`;
           }
@@ -290,6 +293,7 @@ const FallingBricks: React.FC = () => {
 
       bricks.forEach((brick, index) => {
         const { min, max } = brick.bounds;
+
         if (mouseX >= min.x && mouseX <= max.x && mouseY >= min.y && mouseY <= max.y) {
           foundBrickIndex = index;
         }
@@ -321,15 +325,19 @@ const FallingBricks: React.FC = () => {
     return () => {
       Matter.Render.stop(render);
       Matter.Runner.stop(runner);
+      // eslint-disable-next-line
+      // @ts-ignore
       Matter.World.clear(engine.world);
       Matter.Engine.clear(engine);
+      // eslint-disable-next-line react-hooks/exhaustive-deps
       scene.current!.removeEventListener('mousemove', handleMouseMove);
       observer.disconnect();
     };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
-    <div className="flex justify-center items-center relative h-[700px] mt-10 mb-10">
+    <div className="flex justify-center items-center relative h-[500px] mt-3 mb-10 z-10 overflow-hidden">
       <div
         ref={scene}
         style={{
@@ -341,6 +349,7 @@ const FallingBricks: React.FC = () => {
         {bricksData.map((brick, index) => (
           <div
             key={index}
+            // eslint-disable-next-line no-return-assign
             ref={(el) => (bricksRefs.current[index] = el!)}
             style={{
               position: 'absolute',

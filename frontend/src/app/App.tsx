@@ -1,8 +1,8 @@
-import { Header } from '@/widgets/Header';
 import { AppRouter } from '@/app/providers/router';
 import { MainLayout } from '@/shared/layouts/MainLayout';
+import { Header } from '@/widgets/Header';
 
-function App() {
+const App = () => {
   return (
     <div>
       <MainLayout
@@ -12,6 +12,6 @@ function App() {
       />
     </div>
   );
-}
+};
 
 export default App;
