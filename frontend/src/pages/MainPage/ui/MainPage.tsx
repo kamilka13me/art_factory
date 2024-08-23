@@ -1,11 +1,13 @@
-import FallingBricks from './componets/FallingBricks';
+import ConnectToday from './componets/ConnectToday';
 import Donors from './componets/Donors';
+import FallingBricks from './componets/FallingBricks';
 import Hero from './componets/Hero';
-import WhoAreWe from './componets/WhoAreWe';
-import OurServices from './componets/OurServices';
-import OurProjects from './componets/OurProjects';
+import HowWeWork from './componets/HowWeWork';
 import News from './componets/News';
+import OurProjects from './componets/OurProjects';
+import OurServices from './componets/OurServices';
 import Strategi from './componets/Strategi';
+import WhoAreWe from './componets/WhoAreWe';
 
 const MainPage = () => {
   return (
@@ -22,6 +24,8 @@ const MainPage = () => {
         {/* <div className="text-white h-[1200px] flex mb-10">end</div> */}
       </div>
       <Strategi />
+      <HowWeWork />
+      <ConnectToday />
     </div>
   );
 };

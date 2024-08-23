@@ -1,11 +1,11 @@
+import Charlesdeluvio from '@/shared/assets/img/charlesdeluvio.png';
+import ExhibitionPhoto from '@/shared/assets/img/ExhibitionPhoto.png';
+import Uniq from '@/shared/assets/img/Unique_individuals_photo.png';
+import { ButtonLink } from '@/shared/ui/ButtonLink';
 import { Image } from '@/shared/ui/Image';
+import { Link } from '@/shared/ui/Link';
 import { HStack, VStack } from '@/shared/ui/Stack';
 import { Text } from '@/shared/ui/Text';
-import ExhibitionPhoto from '@/shared/assets/img/ExhibitionPhoto.png';
-import { ButtonLink } from '@/shared/ui/ButtonLink';
-import { Link } from '@/shared/ui/Link';
-import Uniq from '@/shared/assets/img/Unique_individuals_photo.png';
-import Charlesdeluvio from '@/shared/assets/img/charlesdeluvio.png';
 
 const News = () => {
   return (
@@ -17,10 +17,7 @@ const News = () => {
         {/* block 1 */}
         <Link to="/404" className="h-full">
           <div className="rounded-[30px] overflow-hidden relative h-full">
-            <div
-              className=" absolute w-full h-full bg-white"
-              style={{ opacity: 0.03 }}
-            ></div>
+            <div className=" absolute w-full h-full bg-white" style={{ opacity: 0.03 }} />
             <div className="flex justify-between flex-col h-full">
               <div className="px-10 py-10 flex flex-col justify-between h-full">
                 <Text

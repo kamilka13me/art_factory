@@ -1,12 +1,13 @@
 import React, { VFC, SVGProps } from 'react';
-import { VStack, HStack } from '@/shared/ui/Stack';
-import { Text } from '@/shared/ui/Text';
+
+import ArrowInCircle from '@/shared/assets/icons/ArrowInCircle.svg?react';
+import Bricks from '@/shared/assets/icons/bricks.svg?react';
+import Heart from '@/shared/assets/icons/heart.svg?react';
 import SphereSqure from '@/shared/assets/icons/sphereSqure.svg?react';
 import Star from '@/shared/assets/icons/star.svg?react';
-import Heart from '@/shared/assets/icons/heart.svg?react';
-import Bricks from '@/shared/assets/icons/bricks.svg?react';
-import ArrowInCircle from '@/shared/assets/icons/ArrowInCircle.svg?react';
 import { Icon } from '@/shared/ui/Icon';
+import { VStack, HStack } from '@/shared/ui/Stack';
+import { Text } from '@/shared/ui/Text';
 
 export type TextColors =
   | 'primary'
@@ -41,8 +42,8 @@ const ServiceBrick: React.FC<ServiceBrickProps> = ({
     <VStack className="w-full h-[400px] max-w-[549px] rounded-[30px] relative">
       <div
         className="absolute w-full h-full bg-white rounded-[30px]"
-        style={{ opacity: opacity }}
-      ></div>
+        style={{ opacity }}
+      />
       <div className="relative flex flex-col justify-between h-full p-10">
         <Icon Svg={img} width={100} height={100} />
         <VStack>
@@ -135,9 +136,9 @@ const OurServices = () => {
               opacity={block.opacity}
               title={block.title}
               text={block.text}
-              //@ts-expect-error
+              // @ts-expect-error : library
               titleColor={block.titleColor}
-              //@ts-expect-error
+              // @ts-expect-error : library
               textColor={block.textColor}
               img={block.img}
               link={block.link}

@@ -1,7 +1,7 @@
+import Rye from '@/shared/assets/img/rye.png';
 import { Image } from '@/shared/ui/Image';
 import { HStack, VStack } from '@/shared/ui/Stack';
 import { Text } from '@/shared/ui/Text';
-import Rye from '@/shared/assets/img/rye.png';
 
 const Box = () => {
   return (
@@ -36,7 +36,7 @@ const Box = () => {
           <div className="grid grid-cols-[50%_1fr] pb-10 gap-[30px] ">
             <div className="flex flex-col justify-end">
               <div className="w-full bg-gray-300 rounded-full h-[10px] overflow-hidden">
-                <div className="bg-[#FF4E00] h-full" style={{ width: '30%' }}></div>
+                <div className="bg-[#FF4E00] h-full" style={{ width: '30%' }} />
               </div>
               <div className="flex justify-between mt-2">
                 <div className="flex flex-col">
