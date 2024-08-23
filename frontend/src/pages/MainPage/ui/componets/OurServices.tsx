@@ -5,7 +5,7 @@ import Bricks from '@/shared/assets/icons/bricks.svg?react';
 import Heart from '@/shared/assets/icons/heart.svg?react';
 import SphereSqure from '@/shared/assets/icons/sphereSqure.svg?react';
 // import Star1 from '@/shared/assets/icons/star.svg?react';
-import Star from '@/shared/assets/img/star.svg?react';
+import Star from '@/shared/assets/icons/star.svg?react';
 import { Icon } from '@/shared/ui/Icon';
 import { VStack, HStack } from '@/shared/ui/Stack';
 import { Text } from '@/shared/ui/Text';

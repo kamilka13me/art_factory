@@ -3,7 +3,7 @@ import { Text } from '@/shared/ui/Text';
 
 const ConnectToday = () => {
   return (
-    <div className="flex justify-center  border-t-2 border-t-[#DCDCDC] mx-[156px]  max-w-[1128px] ">
+    <div className="flex justify-center  border-t-2 border-t-[#DCDCDC] mx-[156px] mb-[180px] max-w-[1128px] ">
       <div className="flex justify-between w-full  mt-10 gap-[60px] ">
         <div className="w-full">
           <Text
