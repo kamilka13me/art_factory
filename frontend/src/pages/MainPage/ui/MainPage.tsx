@@ -13,21 +13,27 @@ import WhoAreWe from './componets/WhoAreWe';
 const MainPage = () => {
   return (
     <div>
-      <div className="bg-main-dark min-h-screen rounded-b-[60px] ">
-        <Hero />
-        <Donors />
-        <WhoAreWe />
-        <OurServices />
-        <FallingBricks />
-        <OurProjects />
-        <News />
+      <div className="bg-main-dark rounded-b-[60px]  flex flex-col items-center ">
+        <div className="max-w-[1440px] flex flex-col justify-center">
+          <Hero />
+          <Donors />
+          <WhoAreWe />
+          <OurServices />
+          <FallingBricks />
+          <OurProjects />
+          <News />
 
-        {/* <div className="text-white h-[1200px] flex mb-10">end</div> */}
+          {/* <div className="text-white h-[1200px] flex mb-10">end</div> */}
+        </div>
       </div>
-      <Strategi />
-      <OurValues />
-      <HowWeWork />
-      <ConnectToday />
+      <div className=" flex flex-col items-center ">
+        <div className="max-w-[1440px] flex flex-col justify-center">
+          <Strategi />
+          <OurValues />
+          <HowWeWork />
+          <ConnectToday />
+        </div>
+      </div>
     </div>
   );
 };

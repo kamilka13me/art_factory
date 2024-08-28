@@ -13,7 +13,8 @@ export type TextColors =
   | 'green'
   | 'white'
   | '[#474747]'
-  | 'dark';
+  | 'dark'
+  | 'base/text_dark';
 
 export type FontSize =
   | 'xxs'
@@ -39,7 +40,8 @@ const TextColor: Record<TextColors, string> = {
   green: 'text-green',
   white: 'text-main-white',
   dark: 'text-main-dark',
-  '[#474747]': '[#474747]',
+  'base/text_dark': 'text-base/text_dark',
+  '[#474747]': 'text-[#474747]',
 };
 
 const TextAlignClass: Record<TextAlign, string> = {

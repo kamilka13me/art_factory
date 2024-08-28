@@ -12,7 +12,7 @@ const MainLayout: FC<Props> = (props) => {
   return (
     <div className="flex flex-col mx-auto min-h-screen   items-center">
       {header}
-      <main className="flex-1 h-full w-full max-w-[1440px] relative">{content}</main>
+      <main className="flex-1 h-full w-full  relative">{content}</main>
       {footer}
     </div>
   );

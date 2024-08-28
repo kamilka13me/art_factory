@@ -46,6 +46,9 @@ export default {
         'secondary-dark': '#B6B6B6',
         'selected-dark': '#1D1D1D',
         'gray-light': '#E8E8E8',
+
+        'base/text_dark': '#474747',
+        'base/text': '#E8E8E8',
       },
     },
   },

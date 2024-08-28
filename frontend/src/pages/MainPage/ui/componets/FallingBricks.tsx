@@ -325,14 +325,17 @@ const FallingBricks: React.FC = () => {
     return () => {
       Matter.Render.stop(render);
       Matter.Runner.stop(runner);
-      // eslint-disable-next-line
-      // @ts-ignore
-      Matter.World.clear(engine.world);
-      Matter.Engine.clear(engine);
-      // eslint-disable-next-line react-hooks/exhaustive-deps
-      scene.current!.removeEventListener('mousemove', handleMouseMove);
+
+      if (scene.current) {
+        scene.current.removeEventListener('mousemove', handleMouseMove);
+      }
+
       observer.disconnect();
+
+      Matter.World.clear(engine.world, false); // Передаємо false, щоб очистити всі тіла
+      Matter.Engine.clear(engine);
     };
+
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 

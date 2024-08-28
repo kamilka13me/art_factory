@@ -6,6 +6,7 @@ import { Image } from '@/shared/ui/Image';
 import { HStack, VStack } from '@/shared/ui/Stack';
 import { Text } from '@/shared/ui/Text';
 import { Icon } from '@/shared/ui/Icon';
+import { ButtonLink } from '@/shared/ui/ButtonLink';
 
 interface BoxProps {
   src: string;
@@ -20,7 +21,7 @@ const Box = ({ src, title, subTitle }: BoxProps) => {
           <Image src={src} alt="rye " />
         </div>
         <div className="grid grid-rows-2 h-full pt-10 ">
-          <div className="grid grid-cols-[50%_1fr] gap-[30px] ">
+          <div className="grid grid-cols-[50%_1fr] gap-[30px] mr-10 ">
             <Text Tag="h1" text={title} size="3xl" className="leading-10" />
             <div className="gap-10 flex flex-col">
               <Text
@@ -40,7 +41,7 @@ const Box = ({ src, title, subTitle }: BoxProps) => {
               </div>
             </div>
           </div>
-          <div className="grid grid-cols-[50%_1fr] pb-10 gap-[30px] ">
+          <div className="grid grid-cols-[50%_1fr] pb-10 gap-[30px]  mr-10 ">
             <div className="flex flex-col justify-end">
               <div className="w-full bg-gray-300 rounded-full h-[10px] overflow-hidden">
                 <div className="bg-[#FF4E00] h-full" style={{ width: '30%' }} />
@@ -60,6 +61,9 @@ const Box = ({ src, title, subTitle }: BoxProps) => {
                   <Text Tag="p" size="2xl" text="45 000 USD" bold />
                 </div>
               </div>
+            </div>
+            <div className="flex flex-col justify-end items-end">
+              <ButtonLink to="/404" variant="arrowTextBlue" text="Підтримати проєкт" />
             </div>
           </div>
         </div>

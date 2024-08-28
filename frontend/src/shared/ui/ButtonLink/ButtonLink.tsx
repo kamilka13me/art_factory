@@ -79,9 +79,9 @@ const ButtonLink = forwardRef<HTMLButtonElement, Props>((props, ref) => {
 
             <Icon
               Svg={ArrowInCircleBlue}
-              width={size || 45}
-              height={size || 45}
-              className="min-w-[45px] ml-[-5px]"
+              width={size || 49}
+              height={size || 49}
+              className="min-w-[45px]"
             />
           </div>
         ) : (
