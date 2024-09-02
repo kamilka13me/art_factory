@@ -30,7 +30,7 @@ const Strategi = () => {
               text="01"
               size="2xl"
               color="dark"
-              className="ml-10 font-medium hover:text-[#2C05F2]"
+              className="ml-10  hover:text-[#2C05F2]"
             />
             <Text
               Tag="h5"
@@ -46,14 +46,14 @@ const Strategi = () => {
           >
             <Text
               Tag="h5"
-              text="01"
+              text="02"
               size="2xl"
               color="dark"
               className="ml-10 font-medium hover:text-[#2C05F2]"
             />
             <Text
               Tag="h5"
-              text="Зростання"
+              text="Популяризація"
               size="5xl"
               color="dark"
               className="ml-10 font-medium hover:text-[#2C05F2]"
@@ -65,14 +65,14 @@ const Strategi = () => {
           >
             <Text
               Tag="h5"
-              text="01"
+              text="03"
               size="2xl"
               color="dark"
               className="ml-10 font-medium hover:text-[#2C05F2]"
             />
             <Text
               Tag="h5"
-              text="Зростання"
+              text="Реформа"
               size="5xl"
               color="dark"
               className="ml-10 font-medium hover:text-[#2C05F2]"
@@ -114,9 +114,69 @@ const Strategi = () => {
               </div>
             </div>
           ) : strategi === 2 ? (
-            <div>2</div>
+            <div className="gap-6 flex flex-col">
+              <h6 className=" font-sans text-[28px] font-medium text-[#151515] ">
+                Для збільшення попиту на українські культурні продукти ми:
+              </h6>
+              <div className="flex items-center">
+                <ButtonLink variant="ArrowVectorGray" to="/404" />
+                <Text
+                  Tag="p"
+                  size="lg"
+                  text="Розвиваємо інфраструктуру для вашої роботи, оскільки знаємо як важливо
+                  мати доступ до юристів, бухгалтерів, виставкових просторів, майстерень
+                  тощо."
+                />
+              </div>
+              <div className="flex items-center">
+                <ButtonLink variant="ArrowVectorGray" to="/404" />
+                <Text
+                  Tag="p"
+                  size="lg"
+                  text="Проводимо освітні заходи для вдосконалення ваших підприємницьких навичок, щоб ви вміли будувати життєздатні бізнес-моделі, коректно оцінювати вартість робіт, ефективно управління фінансами та багато іншого."
+                />
+              </div>
+              <div className="flex items-center">
+                <ButtonLink variant="ArrowVectorGray" to="/404" />
+                <Text
+                  Tag="p"
+                  size="lg"
+                  text="Підтримуємо вас на шляху підвищення конкурентоспроможності на міжнародному рівні та експорту мистецьких продуктів та послуг."
+                />
+              </div>
+            </div>
           ) : strategi === 3 ? (
-            <div>3</div>
+            <div className="gap-6 flex flex-col">
+              <h6 className=" font-sans text-[28px] font-medium text-[#151515] ">
+                Для збільшення попиту на українські культурні продукти ми:
+              </h6>
+              <div className="flex items-center">
+                <ButtonLink variant="ArrowVectorGray" to="/404" />
+                <Text
+                  Tag="p"
+                  size="lg"
+                  text="Розвиваємо інфраструктуру для вашої роботи, оскільки знаємо як важливо
+                  мати доступ до юристів, бухгалтерів, виставкових просторів, майстерень
+                  тощо."
+                />
+              </div>
+              <div className="flex items-center">
+                <ButtonLink variant="ArrowVectorGray" to="/404" />
+                <Text
+                  Tag="p"
+                  size="lg"
+                  text="Проводимо освітні заходи для вдосконалення ваших підприємницьких навичок, щоб ви вміли будувати життєздатні бізнес-моделі, коректно оцінювати вартість робіт, ефективно управління фінансами та багато іншого."
+                />
+              </div>
+              <div className="flex items-center">
+                <ButtonLink variant="ArrowVectorGray" to="/404" />
+                <Text
+                  Tag="p"
+                  size="lg"
+                  text="Підтримуємо вас на шляху підвищення конкурентоспроможності на міжнародному рівні та експорту мистецьких продуктів та послуг."
+                />
+              </div>
+            </div>
           ) : null}
         </div>
       </div>

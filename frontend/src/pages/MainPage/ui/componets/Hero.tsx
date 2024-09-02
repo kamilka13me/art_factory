@@ -10,17 +10,22 @@ const Hero = () => {
     <VStack className="py-10 px-10">
       <div className="bg-white h-[600px] w-full rounded-[30px] flex justify-center items-center flex-col px-5 ">
         <div className="mb-4 max-w-[893px]">
+          {/* yellow shape незалежна */}
           <div className="inline-flex w-auto items-baseline">
             <Icon Svg={YellowSphere} width={89} height="auto" />
-            <span className="text-7xl font-ibm-plex-serif">Незалежній</span>
+            <span className="text-[70px]  font-ibm-plex-serif">Незалежній</span>
           </div>
+          {/* orange arch  країні*/}
           <div className="inline-flex w-auto items-baseline">
             <Icon Svg={OrangeArch} width={97} height="auto" />
             <span className="text-[70px]  font-ibm-plex-serif">країні -</span>
           </div>
-          <div className="flex w-auto gap-4 text-7xl items-end flex-wrap">
-            <div> незалежну </div>
-            <div> культуру </div>
+          {/* purple elipse */}
+          <div className="flex w-auto gap-4 text-7xl items-canter flex-wrap">
+            <div className="text-[70px]  font-ibm-plex-serif flex leading-[50px]">
+              незалежну
+            </div>
+            <Text Tag="h1" name="H1" text="культуру" />
             <Icon Svg={PurpleElipse} width={153} height={59} />
           </div>
         </div>

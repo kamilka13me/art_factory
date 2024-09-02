@@ -4,6 +4,8 @@ export type TextAlign = 'right' | 'left' | 'center';
 
 export type HeaderTagType = 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'p' | 'span';
 
+export type NameType = 'Desktop/H1';
+
 export type TextColors =
   | 'primary'
   | 'gray'
@@ -30,6 +32,7 @@ export type FontSize =
   | '6xl';
 
 export type TextFonts = 'sans' | 'serif';
+export type NameClases = 'sans' | 'H1';
 
 const TextColor: Record<TextColors, string> = {
   primary: 'text-main-dark',
@@ -54,6 +57,10 @@ const TextFont: Record<TextFonts, string> = {
   sans: 'font-ibm-plex-sans',
   serif: 'font-ibm-plex-serif',
 };
+const NameClass: Record<NameClases, string> = {
+  sans: 'font-ibm-plex-sans',
+  H1: 'font-ibm-plex-serif text-[70px] leading-[50px]',
+};
 
 const fontSize: Record<FontSize, string> = {
   xxs: 'text-xxs',
@@ -72,10 +79,11 @@ const fontSize: Record<FontSize, string> = {
 interface Props {
   Tag: HeaderTagType;
   text: string | undefined;
-  size: FontSize;
+  size?: FontSize;
   color?: TextColors;
   bold?: boolean;
   font?: TextFonts;
+  name?: NameClases;
   align?: TextAlign;
   className?: string;
 }
@@ -90,16 +98,18 @@ const Text: FC<Props> = (props) => {
     className,
     color,
     font = 'sans',
+    name = 'sans',
   } = props;
 
   const textAlign = TextAlignClass[align];
-  const textSize = fontSize[size];
+  const textSize = size ? fontSize[size] : '';
   const textColor = color ? TextColor[color] : '';
   const textFont = TextFont[font];
+  const nameClass = NameClass[name];
 
   return (
     <Tag
-      className={` ${bold ? 'font-bold' : ''}  ${textFont}   ${textSize} ${textAlign} ${textColor} ${className}`}
+      className={`  ${bold ? 'font-bold' : ''}  ${textFont}   ${textSize} ${textAlign} ${textColor} ${nameClass}  ${className}`}
     >
       {text}
     </Tag>
